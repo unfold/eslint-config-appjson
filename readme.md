@@ -17,6 +17,12 @@ Then in your eslint config add `appjson` as plugin and the rules to apply.
 ### require-process-env-defined
 Enforces that every variable used from `process.env` is defined in your app.json file.
 
+You can whitelist keys that should not be required in options.
+
+```
+"appjson/require-process-env-defined": [1, [ "NODE_ENV" ]]
+```
+
 
 ## Contributing
 Right now theres only 1 rule. If you have an idea for a good rule for this plugin, send a pull request or open an issue with your suggestion.
