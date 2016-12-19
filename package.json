@@ -2,6 +2,7 @@
   "name": "eslint-plugin-appjson",
   "version": "0.1.1",
   "description": "eslint plugin for app.json validation",
+  "repository": "unfold/eslint-config-appjson",
   "author": "Unfold <github@unfold.no>",
   "main": "lib/index.js",
   "files": [
