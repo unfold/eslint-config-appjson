@@ -1,0 +1,34 @@
+{
+  "name": "eslint-plugin-appjson",
+  "version": "0.1.0",
+  "description": "eslint plugin for app.json validation",
+  "author": "Unfold <github@unfold.no>",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "rm -r lib || exit 0",
+    "build": "babel src --out-dir lib",
+    "prepublish": "npm run build",
+    "postpublish": "git push origin"
+  },
+  "eslintConfig": {
+    "extends": "@unfold/eslint-config"
+  },
+  "babel": {
+    "presets": [
+      "@unfold/babel-preset"
+    ]
+  },
+  "devDependencies": {
+    "@unfold/eslint-config": "^1.3.2",
+    "@unfold/babel-preset": "^1.0.2",
+    "babel-cli": "^6.18.0",
+    "eslint": "^3.12.2"
+  },
+  "dependencies": {
+    "find-up": "^2.1.0"
+  }
+}
