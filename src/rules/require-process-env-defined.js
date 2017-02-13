@@ -6,6 +6,10 @@ import findUp from 'find-up'
 const getAppsjson = context => {
   const path = findUp.sync('app.json', { cwd: context })
 
+  if (!path) {
+    return null
+  }
+
   try {
     return JSON.parse(fs.readFileSync(path, 'utf8'))
   } catch (error) {
